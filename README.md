@@ -150,6 +150,9 @@ No activity tracked
 
 | Logo | Repo | Description |
 | :---: | :--- | :--- |
+| <img src="https://raw.githubusercontent.com/tpc-pascal/subpas/main/assets/logo.svg" width="100"> | [**subpas**](https://github.com/tpc-pascal/subpas) | Lấy toàn bộ danh sách phát và kênh đăng ký để quản lý trực quan |
+| <img src="https://raw.githubusercontent.com/tpc-pascal/libracal/main/assets/logo.svg" width="100"> | [**libracal**](https://github.com/tpc-pascal/libracal) | Không gian kỹ thuật số, nơi lưu trữ ký ức thời gian |
+| <img src="https://raw.githubusercontent.com/tpc-pascal/calarch/main/assets/logo.svg" width="100"> | [**calarch**](https://github.com/tpc-pascal/calarch) | God-Mode cho Panasonic CF-XZ6 — Arch Linux, Hyprland, CPU Affinity |
 
 ###
 

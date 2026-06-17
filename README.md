@@ -144,6 +144,15 @@ No activity tracked
 
 ###
 
+<h2 align="left">Projects</h2>
+
+###
+
+| Logo | Repo | Description |
+| :---: | :--- | :--- |
+
+###
+
 <img src="https://raw.githubusercontent.com/tpc-pascal/tpc-pascal/output/snake.svg" alt="Snake animation" />
 
 ###

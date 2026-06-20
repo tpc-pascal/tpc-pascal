@@ -150,6 +150,7 @@ No activity tracked
 
 | Logo | Repo | Description |
 | :---: | :--- | :--- |
+| <img src="https://raw.githubusercontent.com/tpc-pascal/pascai-skill/main/assets/logo.svg" width="100"> | [**pascai-skill**](https://github.com/tpc-pascal/pascai-skill) | Hệ điều hành AI di động — Portable AI Operating System cho đa tác tử (multi-agent) |
 | <img src="https://raw.githubusercontent.com/tpc-pascal/caload/main/assets/logo.svg" width="100"> | [**caload**](https://github.com/tpc-pascal/caload) | Bộ công cụ đa phương tiện — Tải file siêu tốc, nén video, tải YouTube, xử lý hàng loạt. |
 | <img src="https://raw.githubusercontent.com/tpc-pascal/subpas/main/assets/logo.svg" width="100"> | [**subpas**](https://github.com/tpc-pascal/subpas) | Lấy toàn bộ danh sách phát và kênh đăng ký để quản lý trực quan |
 | <img src="https://raw.githubusercontent.com/tpc-pascal/libracal/main/assets/logo.svg" width="100"> | [**libracal**](https://github.com/tpc-pascal/libracal) | Không gian kỹ thuật số, nơi lưu trữ ký ức thời gian |

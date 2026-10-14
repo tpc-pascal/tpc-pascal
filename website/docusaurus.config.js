@@ -63,6 +63,7 @@ const config = {
               {label: 'media', to: '/docs/media'},
               {label: 'report', to: '/docs/report'},
               {label: 'diagram', to: '/docs/diagram'},
+              {label: 'Dự án', to: '/docs/projects'},
             ],
           },
           {

@@ -18,12 +18,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      SKILLS_DIR: ${{ github.workspace }}/skills-src/skills
+      SKILLS_DIR: ${{ github.workspace }}/skills-src/research
     steps:
       - uses: actions/checkout@v4
       - uses: actions/checkout@v4
         with:
-          repository: tpc-pascal/report-skill
+          repository: tpc-pascal/agent-skills
           path: skills-src
       - uses: actions/setup-node@v4
         with:

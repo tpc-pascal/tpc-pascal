@@ -4,7 +4,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'tpc-pascal',
-  tagline: 'Bộ skill agent: report-skill / web / doc / media / report / diagram',
+  tagline: 'Bộ skill agent: orchestrator / web / doc / media / report / diagram',
   favicon: 'img/favicon.ico',
 
   url: 'https://tpc-pascal.github.io',
@@ -47,7 +47,7 @@ const config = {
         title: 'tpc-pascal',
         items: [
           {type: 'docSidebar', sidebarId: 'docs', position: 'left', label: 'Docs'},
-          {href: 'https://github.com/tpc-pascal/report-skill', label: 'Skills', position: 'right'},
+          {href: 'https://github.com/tpc-pascal/agent-skills', label: 'Skills', position: 'right'},
           {href: 'https://github.com/tpc-pascal', label: 'GitHub', position: 'right'},
         ],
       },
@@ -57,11 +57,11 @@ const config = {
           {
             title: 'Kỹ năng',
             items: [
-              {label: 'report-skill', to: '/docs/report-skill'},
+              {label: 'orchestrator', to: '/docs/orchestrator'},
               {label: 'web', to: '/docs/web'},
               {label: 'doc', to: '/docs/doc'},
               {label: 'media', to: '/docs/media'},
-              {label: 'report', to: '/docs/report'},
+              {label: 'report', to: '/docs/paper'},
               {label: 'diagram', to: '/docs/diagram'},
               {label: 'Dự án', to: '/docs/projects'},
             ],
@@ -69,7 +69,7 @@ const config = {
           {
             title: 'Repo',
             items: [
-              {label: 'GitHub', href: 'https://github.com/tpc-pascal/report-skill'},
+              {label: 'GitHub', href: 'https://github.com/tpc-pascal/agent-skills'},
               {label: 'Cài đặt', to: '/docs/intro'},
             ],
           },

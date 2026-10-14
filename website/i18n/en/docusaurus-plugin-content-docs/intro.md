@@ -2,14 +2,14 @@
 sidebar_position: 1
 ---
 
-# report-skill
+# agent-skills
 
-Agent skill set for OpenCode/Claude/Cursor: **report-skill** (orchestration + question gate), **web** (web/social/search reading), **doc** (PDF/DOCX/XLSX), **media** (video/audio/image), **report** (bilingual/academic reports), **diagram** (diagrams/charts).
+Agent skill set for OpenCode/Claude/Cursor: **agent-skills** (orchestration + question gate), **web** (web/social/search reading), **doc** (PDF/DOCX/XLSX), **media** (video/audio/image), **report** (bilingual/academic reports), **diagram** (diagrams/charts).
 
 ## Install
 
 ```bash
-npx skills add tpc-pascal/report-skill --all
+npx skills add tpc-pascal/agent-skills --all
 ```
 
 Install a single skill: `--skill doc`, use `--list` to see all, `-g --all` for global.
@@ -18,11 +18,11 @@ Install a single skill: `--skill doc`, use `--list` to see all, `-g --all` for g
 
 | Skill | Use when | Third-party |
 |---|---|---|
-| [report-skill](./report-skill.md) | Dispatching other skills + question gate before reports | — |
+| [orchestrator](./orchestrator.md) | Dispatching other skills + question gate before reports | — |
 | [web](./web.md) | Web/social/search: read URLs, articles, exa | `Panniantong/Agent-Reach` |
 | [doc](./doc.md) | PDF/DOCX/XLSX: extract, OCR, convert, merge/split | `timelapsetech/mediaskills` (`inspect`), `docling-project/docling` (`docling`) |
 | [media](./media.md) | video/audio/image: summarize, caption, cut, frames, download | `timelapsetech/mediaskills`, `bradautomates/claude-video` (`watch`), `Iroli007/Aliceloop` (`music-listener`) |
-| [report](./report.md) | Bilingual/academic reports, export `.report.docx` | `anthropics/skills` (`docx`, `pdf`) |
+| [report](./paper.md) | Bilingual/academic reports, export `.report.docx` | `anthropics/skills` (`docx`, `pdf`) |
 | [diagram](./diagram.md) | Mermaid diagrams / matplotlib charts for reports | kroki.io |
 
 ## Highlights

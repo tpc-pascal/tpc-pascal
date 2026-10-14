@@ -1,15 +1,15 @@
-// sync-docs.mjs — copy skills/*/SKILL.md + references/ vào website/docs (VI) và i18n/en (EN)
+// sync-docs.mjs — copy research/*/SKILL.md + references/ vào website/docs (VI) và i18n/en (EN)
 // Chạy trước khi build: node website/sync-docs.mjs
 import {existsSync, mkdirSync, readFileSync, rmSync, writeFileSync, readdirSync} from 'node:fs';
 import {dirname, join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const skillsDir = process.env.SKILLS_DIR || join(root, 'skills');
+const skillsDir = process.env.SKILLS_DIR || join(root, 'research');
 const docsDir = join(root, 'website', 'docs');
 const enDir = join(root, 'website', 'i18n', 'en', 'docusaurus-plugin-content-docs');
 
-const SKILL_POS = {'report-skill': 2, web: 3, doc: 4, media: 5, report: 6, diagram: 7};
+const SKILL_POS = Object.fromEntries(readdirSync(skillsDir).filter(f => !f.startsWith('.') && !f.endsWith('.md')).sort().map((f, i) => [f, i + 2]));
 
 rmSync(join(docsDir, 'doc'), {recursive: true, force: true});
 rmSync(join(docsDir, 'report'), {recursive: true, force: true});
@@ -31,19 +31,17 @@ function convert(srcPath, {isEn, skill, position}) {
   return fm + text.trimStart();
 }
 
-mkdirSync(join(docsDir, 'doc'), {recursive: true});
-mkdirSync(join(docsDir, 'report'), {recursive: true});
-mkdirSync(join(enDir, 'doc'), {recursive: true});
-mkdirSync(join(enDir, 'report'), {recursive: true});
 
-for (const skill of readdirSync(skillsDir)) {
-  const pos = SKILL_POS[skill];
+for (const skill of readdirSync(skillsDir).filter(f => !f.endsWith('.md'))) {
+  const pos = SKILL_POS[skill] ?? 9;
   if (!pos) continue;
   const dir = join(skillsDir, skill);
   writeFileSync(join(docsDir, `${skill}.md`), convert(join(dir, 'SKILL.md'), {isEn: false, skill, position: pos}));
   writeFileSync(join(enDir, `${skill}.md`), convert(join(dir, 'SKILL.en.md'), {isEn: true, skill, position: pos}));
   const refDir = join(dir, 'references');
   if (!existsSync(refDir)) continue;
+  mkdirSync(join(docsDir, skill), {recursive: true});
+  mkdirSync(join(enDir, skill), {recursive: true});
   let refPos = 1;
   for (const f of readdirSync(refDir).sort()) {
     if (f.endsWith('.en.md')) continue;

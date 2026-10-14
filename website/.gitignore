@@ -20,19 +20,19 @@ yarn-debug.log*
 yarn-error.log*
 
 # Sinh tự động bởi sync-docs.mjs (chạy trước build)
-/docs/report-skill.md
+/docs/orchestrator.md
 /docs/web.md
 /docs/diagram.md
 /docs/doc.md
 /docs/media.md
-/docs/report.md
+/docs/paper.md
 /docs/doc/
-/docs/report/
-/i18n/en/docusaurus-plugin-content-docs/report-skill.md
+/docs/paper/
+/i18n/en/docusaurus-plugin-content-docs/orchestrator.md
 /i18n/en/docusaurus-plugin-content-docs/web.md
 /i18n/en/docusaurus-plugin-content-docs/diagram.md
 /i18n/en/docusaurus-plugin-content-docs/doc.md
 /i18n/en/docusaurus-plugin-content-docs/media.md
-/i18n/en/docusaurus-plugin-content-docs/report.md
+/i18n/en/docusaurus-plugin-content-docs/paper.md
 /i18n/en/docusaurus-plugin-content-docs/doc/
-/i18n/en/docusaurus-plugin-content-docs/report/
+/i18n/en/docusaurus-plugin-content-docs/paper/

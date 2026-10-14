@@ -1,0 +1,38 @@
+# Dependencies
+/node_modules
+
+# Production
+/build
+
+# Generated files
+.docusaurus
+.cache-loader
+
+# Misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Sinh tự động bởi sync-docs.mjs (chạy trước build)
+/docs/report-skill.md
+/docs/web.md
+/docs/diagram.md
+/docs/doc.md
+/docs/media.md
+/docs/report.md
+/docs/doc/
+/docs/report/
+/i18n/en/docusaurus-plugin-content-docs/report-skill.md
+/i18n/en/docusaurus-plugin-content-docs/web.md
+/i18n/en/docusaurus-plugin-content-docs/diagram.md
+/i18n/en/docusaurus-plugin-content-docs/doc.md
+/i18n/en/docusaurus-plugin-content-docs/media.md
+/i18n/en/docusaurus-plugin-content-docs/report.md
+/i18n/en/docusaurus-plugin-content-docs/doc/
+/i18n/en/docusaurus-plugin-content-docs/report/

@@ -6,6 +6,11 @@
 
 ###
 
+[![Docs](https://img.shields.io/badge/docs-tpc--pascal.github.io-2e7d32)](https://tpc-pascal.github.io/tpc-pascal/)
+
+
+###
+
 <div align="left">
   <img src="https://count.getloli.com/@:tpc-pascal?theme=e621&scale=1&align=top&pixelated=1&darkmode=auto"  />
 </div>

@@ -1,0 +1,27 @@
+name: Sync Pinned Repos
+'on':
+  workflow_dispatch: null
+  schedule:
+  - cron: 0 0 * * *
+jobs:
+  sync-pinned-repos:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    - name: Sync Projects table with pinned repos
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: python3 scripts/sync_pinned_projects.py
+    - name: Commit pinned table (if changed)
+      run: "if ! git diff --quiet README.md website/docs website/i18n; then\n  git\
+        \ config user.name \"github-actions[bot]\"\n  git config user.email \"41898282+github-actions[bot]@users.noreply.github.com\"\
+        \n  git add README.md website/docs website/i18n\n  git commit -m \"sync: Projects\
+        \ table follows pinned repos\"\n  git push\nfi"
+    - name: Redeploy Pages homepage
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: gh workflow run deploy-pages.yml --repo "$GITHUB_REPOSITORY"

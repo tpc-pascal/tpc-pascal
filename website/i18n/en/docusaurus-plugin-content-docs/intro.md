@@ -2,4 +2,6 @@
 sidebar_position: 1
 ---
 
-<!-- Intentionally left blank -->
+# Introduction
+
+*Intentionally left blank*

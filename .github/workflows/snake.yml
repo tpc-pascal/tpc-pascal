@@ -1,0 +1,43 @@
+name: Snake — Generate Animation
+
+on:
+  schedule: # execute every 12 hours
+    - cron: "0 */12 * * *"
+
+  workflow_dispatch:
+
+  push:
+    branches:
+    - main
+
+jobs:
+  generate:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Create repository-scoped App token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ vars.PASCAL_AUTOMATION_APP_ID }}
+          private-key: ${{ secrets.PASCAL_AUTOMATION_PRIVATE_KEY }}
+          permission-contents: write
+      - name: generate snake.svg
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: dist/snake.svg?palette=github-dark
+
+
+      - name: push snake.svg to the output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+          committer: pascal-automation-agent[bot] <348848148+pascal-automation-agent[bot]@users.noreply.github.com>
+          author: pascal-automation-agent[bot] <348848148+pascal-automation-agent[bot]@users.noreply.github.com>
+        env:
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}

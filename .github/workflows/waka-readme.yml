@@ -1,0 +1,37 @@
+name: Waka — Update Stats
+'on':
+  workflow_dispatch: null
+  schedule:
+  - cron: 0 0 * * *
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+    - name: Create repository-scoped App token
+      id: app-token
+      uses: actions/create-github-app-token@v1
+      with:
+        app-id: ${{ vars.PASCAL_AUTOMATION_APP_ID }}
+        private-key: ${{ secrets.PASCAL_AUTOMATION_PRIVATE_KEY }}
+        permission-contents: write
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ steps.app-token.outputs.token }}
+    - uses: athul/waka-readme@master
+      with:
+        GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+        SHOW_TITLE: true
+        SECTION_NAME: waka
+        TIME_RANGE: last_7_days
+        LANG_COUNT: 5
+        SHOW_TIME: true
+        SHOW_TOTAL: false
+        STOP_AT_OTHER: true
+        COMMITTER_NAME: pascal-automation-agent[bot]
+        COMMITTER_EMAIL: 348848148+pascal-automation-agent[bot]@users.noreply.github.com
+        AUTHOR_NAME: pascal-automation-agent[bot]
+        AUTHOR_EMAIL: 348848148+pascal-automation-agent[bot]@users.noreply.github.com

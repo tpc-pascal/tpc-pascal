@@ -15,7 +15,7 @@
 |:---|:---|:---|
 | <img src="https://github.com/tpc-pascal.png?size=100" width="100"> | [**tpc-pascal**](https://github.com/tpc-pascal/tpc-pascal) | tpc-pascal profile and project automation |
 | <img src="https://raw.githubusercontent.com/tpc-pascal/folio/main/assets/logo.svg" width="100"> | [**folio**](https://github.com/tpc-pascal/folio) | A virtual bookshelf and PDF reader, built on Gradio. |
-| <img src="https://raw.githubusercontent.com/tpc-pascal/skillsmith/main/assets/logo.svg" width="100"> | [**skillsmith**](https://github.com/tpc-pascal/skillsmith) | Agent skill collections for OpenCode/Claude/Cursor — installable per collection, local-first |
+| <img src="https://raw.githubusercontent.com/tpc-pascal/skillsmith-archive/main/assets/logo.svg" width="100"> | [**skillsmith-archive**](https://github.com/tpc-pascal/skillsmith-archive) | Agent skill collections for OpenCode/Claude/Cursor — installable per collection, local-first |
 | <img src="https://github.com/storage.png?size=100" width="100"> | [**storage**](https://github.com/tpc-pascal/storage) | Compressed files which are contained something... |
 <!--PINNED:END-->
 <h2 align="left">Stats</h2>

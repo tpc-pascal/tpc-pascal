@@ -17,6 +17,7 @@
 | <img src="https://raw.githubusercontent.com/tpc-pascal/folio/main/assets/logo.svg" width="100"> | [**folio**](https://github.com/tpc-pascal/folio) | A virtual bookshelf and PDF reader, built on Gradio. |
 | <img src="https://raw.githubusercontent.com/tpc-pascal/skillsmith/main/assets/logo.svg" width="100"> | [**skillsmith**](https://github.com/tpc-pascal/skillsmith) | Skills for local-first research, document processing, web reading, and reporting. |
 | <img src="https://github.com/storage.png?size=100" width="100"> | [**storage**](https://github.com/tpc-pascal/storage) | Compressed files which are contained something... |
+| <img src="https://raw.githubusercontent.com/tpc-pascal/drawlog/main/assets/logo.svg" width="100"> | [**drawlog**](https://github.com/tpc-pascal/drawlog) | Record Vietlott tickets, number combinations, draw dates, and prizes in a lightweight personal ledger. |
 <!--PINNED:END-->
 <h2 align="left">Stats</h2>
 
